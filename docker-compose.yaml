@@ -1,0 +1,15 @@
+version: '3'
+services:
+  backend:
+    image: 'maven:3-jdk-8-alpine'
+    volumes:
+     - ./ws-parking-lot:/app/
+    command: bash -c "
+             apk add tzdata &&
+             cp /usr/share/zoneinfo/America/Manaus /etc/localtime &&
+             echo 'America/Manaus' > /etc/timezone &&
+             mvn spring-boot:run
+             "
+    working_dir: /app
+    ports:
+     - 8080:8080
