@@ -7,6 +7,9 @@ Project - BackEnd - Spring Boot project documented with Swagger in TDD (JUnit)
     1. Run App `mvn spring-boot:run`
 3. Open your browser and see the server running on `http://localhost:8080/ws-parking-lot/api/swagger-ui.html`.
 
+## BANCO DE DADOS - H2
+- http://localhost:8080/ws-parking-lot/api/h2-console
+
 ## Swagger
 - http://localhost:8080/ws-parking-lot/api/swagger-ui.html
 
