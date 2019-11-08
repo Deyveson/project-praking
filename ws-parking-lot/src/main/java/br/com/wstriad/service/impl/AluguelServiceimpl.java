@@ -95,7 +95,7 @@ public class AluguelServiceimpl implements AluguelService {
     }
 
     public String faturamento() {
-
+        
         String faturamento = voucherRepository.findFaturamento();
 
         return "Dia: " + faturamento;

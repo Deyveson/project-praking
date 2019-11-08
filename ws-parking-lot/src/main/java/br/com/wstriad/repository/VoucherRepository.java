@@ -12,9 +12,8 @@ import java.util.List;
 @Repository
 public interface VoucherRepository extends JpaRepository<Voucher, Long> {
 
-    static String selectForWhere = "SELECT new br.com.wstriad.dto.RealatorioDTO(V.saida, SUM(V.preco))" +
-            "FROM Voucher V WHERE V.entrada < ?1";
-
+//    static String selectForWhere = "SELECT new br.com.wstriad.dto.RealatorioDTO(V.saida, SUM(V.preco))" +
+//            "FROM Voucher V WHERE V.entrada < ?1";
 //    @Query( select + " GROUP BY V.saida")
 
    @Query(value = "SELECT a.dia, sum(a.preco) total from (SELECT substr(entrada, 0,10) dia, preco FROM VOUCHER GROUP BY ENTRADA ) a GROUP BY dia", nativeQuery = true)
