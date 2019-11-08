@@ -1,6 +1,7 @@
 package br.com.wstriad.controller;
 
 import br.com.wstriad.domain.Voucher;
+import br.com.wstriad.dto.RealatorioDTO;
 import br.com.wstriad.service.AluguelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,10 +32,9 @@ public class CarController {
     }
 
     @RequestMapping(value = "/faturamento", method = RequestMethod.GET)
-    public String dailyBilling(@RequestParam(value = "Dia", defaultValue = "", required = false) String dia) {
+    public String dailyBilling() {
 
-
-        return service.faturamento(dia);
+        return service.faturamento();
     }
 
 }

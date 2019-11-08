@@ -72,8 +72,6 @@ public class AluguelServiceimpl implements AluguelService {
         return voucher;
     }
 
-    ;
-
     public Boolean checkHora(Date inicio, Date fim, RegraPreco regraPreco) {
 
         Date date = new Date();
@@ -96,27 +94,10 @@ public class AluguelServiceimpl implements AluguelService {
         return false;
     }
 
-    ;
+    public String faturamento() {
 
+        String faturamento = voucherRepository.findFaturamento();
 
-    public String faturamento(String dia) {
-
-//        Date date = new Date(2019, 11, 9, 18, 00);
-//
-//		String dateinicio = "2019-11-08";
-//        String datefim = "2019-11-08 18:00";
-//
-//        System.out.println(dia);
-//        List<RealatorioDTO> listvoucher = voucherRepository.findFaturamento(1);
-//
-//        listvoucher.forEach(res -> {
-//            System.out.println("Voucher ------> " + res.getTotal());
-//        });
-
-        return "Sucesso";
+        return "Dia: " + faturamento;
     }
-
-    ;
-
-
 }

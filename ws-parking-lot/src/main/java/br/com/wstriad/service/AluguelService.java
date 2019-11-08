@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import br.com.wstriad.domain.Voucher;
+import br.com.wstriad.dto.RealatorioDTO;
 
 public interface AluguelService {
 
@@ -11,6 +12,6 @@ public interface AluguelService {
 
     Voucher payVoucher(Long vouche);
 
-    String faturamento (String dia);
+    String faturamento ();
 
 }
